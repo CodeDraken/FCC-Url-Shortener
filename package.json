@@ -15,7 +15,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "start-watch": "nodemon index.js"
+    "start-watch": "nodemon index.js",
+    "test": "mocha **/*.test.js",
+    "test-watch": "nodemon yarn test"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -25,7 +27,9 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",
+    "expect": "^21.2.1",
     "mocha": "^4.0.1",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "supertest": "^3.0.0"
   }
 }

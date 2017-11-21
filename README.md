@@ -1,4 +1,11 @@
-# CodeDraken - Portfolio
-This is my portfolio of projects and things.
+# CodeDraken - FCC URL Shortener
+Minify your urls.
 
-View it at: https://codedraken.github.io/portfolio
+View it at: ...
+
+Run tests by running `npm test`
+
+## Tech used:
+* Code: JavaScript, NodeJS, Express
+* Testing: Mocha, Expect, Supertest
+* Utility: cors, body-parser

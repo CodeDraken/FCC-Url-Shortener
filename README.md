@@ -1,7 +1,7 @@
 # CodeDraken - FCC URL Shortener
 Minify your urls.
 
-View it at: ...
+View it at: https://swamp-door.glitch.me/
 
 Run tests by running `npm test`
 

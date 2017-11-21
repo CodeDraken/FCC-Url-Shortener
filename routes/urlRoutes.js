@@ -7,6 +7,9 @@ const urlRouter = express.Router()
 // use * to avoid issues with urls
 urlRouter.get('/new/:urlToShorten(*)?', urlController.newShortUrl)
 
+// redirect short urls to original urls
+urlRouter.get('/:shortUrl', urlController.shortUrlRedirect)
+
 module.exports = urlRouter
 
 // module.exports = app => {

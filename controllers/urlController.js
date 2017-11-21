@@ -1,6 +1,5 @@
-const path = require('path')
-
 const { ShortUrl } = require('../models')
+const { siteUrl } = require('../config/url.config')
 
 const urlRe = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi
 
@@ -11,6 +10,8 @@ const urlController = {
       const originalUrl = req.query.url
 
       if (urlRe.test(originalUrl)) {
+        // TODO: obviously this is bad.
+        // but fine for now b/c it's just a sample project
         const id = (Math.random() * 1000000 >> 0).toString()
 
         const data = await new ShortUrl({
@@ -21,9 +22,9 @@ const urlController = {
         return res.json(data)
       }
 
-      res.status(400).json({ error: 'Bad url' })
+      return res.status(400).json({ error: 'Bad url' })
     } catch (error) {
-      res.status(500).send(error)
+      return res.status(500).send(error)
     }
   },
 

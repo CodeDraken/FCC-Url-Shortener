@@ -3,7 +3,12 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
+const { mongoURI } = require('./config/db.config')
+
 mongoose.Promise = global.Promise
+mongoose.connect(mongoURI, { useMongoClient: true }, () => {
+  console.log(`Connected to MongoDB at: ${mongoURI}`)
+})
 
 const app = express()
 

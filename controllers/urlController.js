@@ -16,7 +16,7 @@ const urlController = {
 
         const data = await new ShortUrl({
           originalUrl: originalUrl,
-          shortUrl: id
+          shortUrl: siteUrl + id
         }).save()
 
         return res.json(data)
@@ -33,7 +33,7 @@ const urlController = {
 
     try {
       // query the DB
-      const shortUrlObj = await ShortUrl.findOne({ shortUrl })
+      const shortUrlObj = await ShortUrl.findOne({ shortUrl: siteUrl + shortUrl })
       const re = /^(http|https):\/\//i
 
       if (re.test(shortUrlObj)) {

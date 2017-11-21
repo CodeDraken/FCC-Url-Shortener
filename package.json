@@ -1,0 +1,31 @@
+{
+  "name": "url-shortener-fcc",
+  "version": "1.0.0",
+  "description": "An FCC project",
+  "main": "index.js",
+  "repository": "gh",
+  "author": "CodeDraken",
+  "license": "MIT",
+  "engines": {
+    "node": "8.9.0",
+    "npm": "5.5.1"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "start-watch": "nodemon index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.2",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1"
+  }
+}

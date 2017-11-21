@@ -12,10 +12,6 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(express.static(`${__dirname}/public`))
 
-// use * to avoid issues with urls
-app.get('/new/:urlToShorten(*)?', (req, res) => {
-  const urlToShorten = req.query.url
-  res.json({ urlToShorten })
-})
+require('./routes/urlRoutes')(app)
 
 module.exports = app
